@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Zoom from 'react-reveal/Zoom'
 
+import 'bulma'
 import './styles.scss'
-import Home from './components/Home'
-import About from './components/About'
-import Project from './components/Projects'
+import HomeN from './components/HomeN'
+import AboutN from './components/AboutN'
+import ProjectN from './components/ProjectN'
 import Experience from './components/Experience'
 // import NavBar from './components/NavBar'
 
@@ -13,9 +15,9 @@ class App extends React.Component {
 
   render() {
     return <div>
-      <Home />
-      <About />
-      <Project />
+      <HomeN />
+      <ProjectN />
+      <AboutN />
       <Experience />
     </div>
   }
