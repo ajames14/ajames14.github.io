@@ -11,7 +11,7 @@ const NavBarN = () => {
 
   }
 
-  return <nav id='navbar' className="navbar is-fixed-top">
+  return <nav id='navbar' className="navbar is-fixed-top is-transparent">
     <div className="navbar-brand">
       <a href='/' id='logo' className="navbar-item has-text-centered">AJ</a>
       <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navDrop" onClick={handleMenu}>

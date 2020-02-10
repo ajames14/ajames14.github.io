@@ -9,6 +9,9 @@ import AboutN from './components/AboutN'
 import ProjectN from './components/ProjectN'
 import Experience from './components/Experience'
 import NavBarN from './components/NavBarN'
+import NewHome from './components/NewHome'
+import Projects from './components/Projects'
+
 
 class App extends React.Component {
 
@@ -16,10 +19,10 @@ class App extends React.Component {
   render() {
     return <>
       <NavBarN />
-        <HomeN />
-        <ProjectN />
-        <AboutN />
-        <Experience />
+      <HomeN />
+      <AboutN />
+      <Projects />
+      <Experience />
     </>
   }
 }

@@ -6,12 +6,12 @@ const AboutN = () => {
 
 
   return <section className='section' id='about-page'>
-    <Zoom left cascade>
-      <div id='about-title'>ABOUT ME</div>
+    <Zoom right cascade>
+      <div id='about-title'>MY STORY</div>
     </Zoom>
     <div id='about-container'>
-      <Fade bottom>
-        <div id='description-me'>As a Maths graduate, I love taking a complex problem, breaking it up and coming up with a creative solution. After 4 years working in a fast-paced investment bank, I realised I missed the thrill of problem solving. 
+      <Fade>
+        <div id='description-me'>I love taking a complex problem, breaking it up and coming up with a creative solution. After 4 years working in a fast-paced investment bank, I realised I missed the thrill of problem solving. 
         <br />
         <br />
         I decided I wanted a new challenge and a role where I could apply my logical mindset to have an impact. Software development is a unique blend of logic, creativity and intellectual curiosity - exactly what I’m looking for in a career. 
