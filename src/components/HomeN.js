@@ -35,13 +35,9 @@ const HomeN = () => {
 
 
   return <section className='section title-page'>
-    {/* <div id='left-panel'>
-    </div>
-    <div id='middle-panel'>
-    </div> */}
     <div id='right-panel'>
       <Fade bottom>
-        <div className='my-title'>Hi, I'm Abi.</div>{' '}
+        <div className='my-title'>Abi James</div>{' '}
       </Fade>
       <TextLoop mask={true} interval={[1500, 4000, 4000, 4000, 4000]}>
         <Fade bottom>
@@ -61,7 +57,7 @@ const HomeN = () => {
         </Fade>
       </TextLoop>
     </div>
-    <div id='scroll'> <i className="fas fa-long-arrow-alt-left"></i>  scroll</div>
+    {/* <div id='scroll'> <i className="fas fa-long-arrow-alt-left"></i>  scroll</div> */}
   </section>
 
 }
