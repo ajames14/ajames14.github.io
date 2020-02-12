@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
+import Carousel from 'react-bootstrap/Carousel'
 
 import greenGarms from '../images/green-garms.png'
 import swell from '../images/swell.png'
@@ -8,53 +9,129 @@ import makeItCount from '../images/make-it-count.png'
 import lifeOnMars from '../images/life-on-mars.png'
 import tetris from '../images/tetris.png'
 import GreenGarms from './GreenGarms'
+import Swell from './Swell'
+import MakeItCount from './MakeItCount'
+import LifeOnMars from './LifeOnMars'
+import Tetris from './Tetris'
 
 
 const Projects = () => {
 
-  const [itemModal, setItemModal] = useState(false)
+  // const [itemModal, setItemModal] = useState(false)
+  // const [modalContent, setModalContent] = useState('')
 
-  function toggleForm() {
-    setItemModal(!itemModal)
+  function toggleForm(e) {
+    // setModalContent(e.target.value)
+    const modalSelected = document.querySelector(`#${e.target.value}`)
+    modalSelected.classList.toggle('is-active')
+    // console.log(e.target.value)
+    // setItemModal(!itemModal)
   }
 
   return <section className='section' id="project-page">
     <Zoom right cascade>
       <div id='project-title'>PROJECTS</div>
     </Zoom>
-    <div id='project-container'>
-      <div className='project-box' onClick={toggleForm}>
-        <div className={itemModal === true ? 'modal is-active' : 'modal'}>
-          <div className="modal-background" onClick={toggleForm}></div>
-          <div className="modal-content">
-            <GreenGarms
-              toggleForm={toggleForm}
-            />
-          </div>
-          <button className="modal-close is-large" aria-label="close" onClick={toggleForm}></button>
-        </div>
-        <img className='project-img' src={greenGarms} alt='Green Garms' />
-        <div className="overlay">
-          <div className="text"><span>Green Garms</span><br />
-            A Sustainable Fashion App</div>
-        </div>
+
+    <div id='green-garms' className='modal'>
+      <div className="modal-background" ></div>
+      <div className='modal-content'>
+        <GreenGarms
+        />
       </div>
-      <div className='project-box'>
-        <img className='project-img' src={swell} alt='Swell' />
-      </div>
-      <div className='project-box'>
-        <img className='project-img' src={makeItCount} alt='Make It Count' />
-      </div>
-      <div className='project-box'>
-        <img className='project-img' src={lifeOnMars} alt='Life On Mars' />
-      </div>
-      <div className='project-box'>
-        <img className='project-img' src={tetris} alt='Tetris' />
-      </div>
-      <div className='project-box'>
-        <div className='project-img' id='git-box'>GitHub</div>
-      </div>
+      <button className="modal-close is-large" aria-label="close" value='green-garms' onClick={e => toggleForm(e)} ></button>
     </div>
+    <div id='swell' className='modal'>
+      <div className="modal-background"></div>
+      <div className='modal-content'>
+        <Swell
+        />
+      </div>
+      <button className="modal-close is-large" aria-label="close" value='swell' onClick={e => toggleForm(e)}></button>
+    </div>
+    <div id='make-it-count' className='modal'>
+      <div className="modal-background"></div>
+      <div className="modal-content">
+        <MakeItCount
+        />
+      </div>
+      <button className="modal-close is-large" aria-label="close" value='make-it-count' onClick={e => toggleForm(e)}></button>
+    </div>
+    <div id='life-on-mars' className='modal'>
+      <div className="modal-background" ></div>
+      <div className="modal-content">
+        <LifeOnMars
+        />
+      </div>
+      <button className="modal-close is-large" aria-label="close" value='life-on-mars' onClick={e => toggleForm(e)} ></button>
+    </div>
+    <div id='tetris' className='modal' >
+      <div className="modal-background" ></div>
+      <div className="modal-content">
+        <Tetris
+        />
+      </div>
+      <button className="modal-close is-large" aria-label="close" value='tetris' onClick={e => toggleForm(e)} ></button>
+    </div>
+
+
+    <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={greenGarms}
+          alt="First slide"
+          id='project-img'
+        />
+        <Carousel.Caption>
+          <button className='read-more button is-black is-small' value='green-garms' onClick={e => toggleForm(e)}>READ MORE</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={swell} alt='Swell'
+        />
+
+        <Carousel.Caption>
+          <button className='read-more button is-black is-small' value='swell' onClick={e => toggleForm(e)}>READ MORE</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={makeItCount} alt='Make It Count'
+        />
+        <Carousel.Caption>
+          <button className='read-more button is-black is-small' value='make-it-count' onClick={e => toggleForm(e)}>READ MORE</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={lifeOnMars} alt='Life on Mars'
+        />
+        <Carousel.Caption>
+          <button className='read-more button is-black is-small' value='life-on-mars' onClick={e => toggleForm(e)}>READ MORE</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={tetris} alt='Tetris'
+        />
+        <Carousel.Caption>
+          <button className='read-more button is-black is-small' value='tetris' onClick={e => toggleForm(e)}>READ MORE</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+    </Carousel>
+
+
   </section >
 }
 

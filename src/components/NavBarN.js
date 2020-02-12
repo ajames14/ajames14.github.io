@@ -37,6 +37,11 @@ const NavBarN = () => {
             Experience
           </a>
         </div>
+        <div className="navbar-item has-dropdown is-hoverable">
+          <a href='#contact-page' className="navbar-link is-arrowless">
+            Contact
+          </a>
+        </div>
       </div>
     </div>
   </nav >

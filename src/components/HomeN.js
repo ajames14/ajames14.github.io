@@ -35,34 +35,33 @@ const HomeN = () => {
 
 
   return <section className='section title-page'>
-    <div id='left-panel'>
+    {/* <div id='left-panel'>
     </div>
     <div id='middle-panel'>
-    </div>
+    </div> */}
     <div id='right-panel'>
       <Fade bottom>
-        <div className='my-title'>Hi, I'm </div>{' '}
+        <div className='my-title'>Hi, I'm Abi.</div>{' '}
       </Fade>
-      <TextLoop mask={true} interval={[4000]}>
+      <TextLoop mask={true} interval={[1500, 4000, 4000, 4000, 4000]}>
         <Fade bottom>
-          <div className='my-title'>Abi James</div>
+          <div className='my-subtitle'></div>
         </Fade >
         <Fade bottom>
-          <div className='my-title'>a Web Developer</div>
+          <div className='my-subtitle'>Web Developer</div>
         </Fade>
         <Fade bottom>
-          <div className='my-title'>a Mathematician</div>
+          <div className='my-subtitle'>Mathematician</div>
         </Fade>
         <Fade bottom>
-          <div className='my-title'>Ex-Finance</div>
+          <div className='my-subtitle'>Ex-Banker</div>
         </Fade>
         <Fade bottom>
-          <div className='my-title'>a Skier + Surfer</div>
+          <div className='my-subtitle'>Skier + Surfer</div>
         </Fade>
       </TextLoop>
     </div>
     <div id='scroll'> <i className="fas fa-long-arrow-alt-left"></i>  scroll</div>
-
   </section>
 
 }
