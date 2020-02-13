@@ -11,13 +11,14 @@ const AboutN = () => {
     </Zoom>
     <div id='about-container'>
       <Fade>
-        <div id='description-me'>With a background in Maths, I've always loved taking a complex problem, breaking it up and coming up with a creative solution. After leaving university I worked for a fast-paced investment bank for 4 years - a brilliant learning opportunity - but I soon realised I missed the thrill of problem solving. 
+        <div id='description-me'><span id='intro'>Hi, I'm Abi. A London-based Software Developer.</span><br/><br></br>
+        Studying Maths at University, it will come as no suprise that I've always loved solving complex problems; breaking them up and coming up with creative solutons. After leaving university I worked for a fast-paced investment bank for 4 years - a brilliant learning experience - but I soon realised I missed the thrill of problem solving day-to-day.
         <br />
         <br />
-        I decided I wanted a new challenge and a role where I could apply my logical mindset to have an impact. Software development is a unique blend of logic, creativity and intellectual curiosity - exactly what I’m looking for in a career. 
+        I decided I wanted a new challenge and a role where I could apply my logical mindset to have an impact. Software development demands logic, creativity and intellectual curiosity - exactly what makes me tick.
         <br />
         <br />
-        After fast-tracking my learning on the General Assembly Software Engineering course, I’m now excited to begin my career as a Developer and do something I love for a living. </div>
+        After self-teaching myself coding for a while, I decided to take the plunge and fast-track my career change by enrolling on the General Assembly Software Engineering Course. I’m now excited to begin my career as a Developer and do something I love for a living. </div>
       </Fade>
       <div id='skills'>
         <div id='skills-title'>SKILLS</div>

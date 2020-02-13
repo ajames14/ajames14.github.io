@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
 
-$base-color: paleturquoise;
+$base-color: rgb(179, 240, 240);
 
 * {
   box-sizing: border-box;
@@ -16,29 +16,32 @@ body {
 
 #navbar{
   text-transform: uppercase;
-  background-color: transparent;
-  padding: 5px 2px;
+  background-color: rgb(179, 240, 240);
+  padding: 0px 2px;
   
-  background-color: black;
-  // #navDrop{
-  //   background-color: black;
-  //   .navbar-link:hover {
-  //     background-color: black;
-  //   }
-  // }
+  // background-color: black;
+  #navDrop{
+    background-color: rgb(179, 240, 240);
+    .navbar-link:hover {
+      background-color: white;
+    }
+  }
   #logo{
     font-size: 40px;
   }
   .navbar-brand .navbar-item {
   text-transform: uppercase;
-  color: white;
-  -webkit-text-stroke: 2px black;
-  text-shadow: 3px 3px $base-color;
+  // color: white;
+  // -webkit-text-stroke: 2px black;
+  color: black;
+  text-shadow: 3px 3px white;
   font-weight: bold;
   height: 4rem;
   }
   .navbar-menu .navbar-end .navbar-item .navbar-link,  .navbar-brand .navbar-burger {
-    color: white;
+
+    color: black;
+    margin-top: 5px;
     font-weight: bold;
     font-size: 18px;
     height: 4rem;
@@ -55,11 +58,9 @@ body {
     width: 100vw;
     height: 100vh;
     padding-top: 200px;
-    background-color: black;
-    background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+    background-color: rgb(179, 240, 240);
+
+    overflow: hidden;
     display: flex;
     justify-content: flex-start;
     #right-panel{
@@ -83,8 +84,9 @@ body {
       text-transform: uppercase;
       position: absolute;
       top: 45%;
-      color: white;
-      -webkit-text-stroke: 2px black;
+      color:black;
+      text-shadow: 3px 3px white;
+      // -webkit-text-stroke: 2px black;
     }
 
   .my-subtitle{
@@ -93,13 +95,12 @@ body {
     font-weight: 700;
     letter-spacing: 1rem;
     text-transform: uppercase;
-    color: white;
-    -webkit-text-stroke: 2px black;
-    // text-shadow: 3px 3px $base-color;
+    color:black;
+    text-shadow: 3px 3px white;
   }
     @media screen and (max-width: 700px) {
     .my-title {
-      font-size: 28px;
+      font-size: 30px;
       letter-spacing: 0.2rem;
       top: 50%;
     }
@@ -121,23 +122,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
-  height: 100vh;
+  background-color: $base-color;
   .carousel {
     width: 50%;
+    margin: 30px 0;
+    border: 2px solid black;
+    box-shadow: 6px 8px rgb(81, 224, 224);
     // height: 60vh;
-    .carousel-inner{
-      // width: 480px;
-      height: 70vh;
-      .carousel-item{
-        // width: 100%;
-        height: 80%;
-        img {
-          height: 100%;
-        }
-      }
+    .carousel-control-prev, .carousel-control-next {
+      background-color: black;
+      opacity: 0.3;
+      width: 5%;
     }
-  }
+    .read-more{
+      font-family: 'Montserrat', 'sans-serif';
+      font-weight: bold;
+      font-size: 15px;
+      box-shadow: 2px 2px rgb(81, 224, 224);
+
+    }
+
+    }
   .modal .modal-content{
     width: 70%;
   .project-description{
@@ -164,95 +169,24 @@ body {
     }
   }
 }
+#project-title{
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: black;
+  text-shadow: 3px 3px white;
+  font-weight: bold;
 }
+@media screen and (max-width: 700px) {
   #project-title{
-    font-size: 30px;
-    text-transform: uppercase;
-    color: white;
-    margin: 20px 0 40px 0;
-    -webkit-text-stroke: 2px black;
-    text-shadow: 3px 3px $base-color;
-    font-weight: bold;
+    font-size: 28px;
   }
-  #project-container{
-    margin-top: 3%;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    .project-box{
-      display: flex;
-      justify-content: center;
-      position: relative;
-      width: 45%;
-      margin: 2%;
-    .project-box:hover .overlay {
-      opacity: 0.7;
-    }
-    .project-img{
-      width: 100%;
-      height: 100%;
-      border: 2px solid white;
-      // box-shadow: 4px 4px $base-color;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      width: 100%;
-      opacity: 0;
-      transition: .5s ease;
-      background-color: black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    #git-box{
-      background-color: $base-color;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      font-size: 25px;
-      color: white;
-      #git-link{
-      color: white;
-      }
-    }
-    .text {
-      color: white;
-      font-weight: bold;
-      height: 50%;
-      font-size: 18px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      text-transform: uppercase;
-      .no-modal{
-        display: none;
-      }
-      .text-title{
-        font-weight: bold;
-        color: white;
-        font-size: 25px;
-        -webkit-text-stroke: 2px black;
-      }
-      button{
-        background-color: white;
-        // border: 1px solid black;
-        color: $base-color;
-        text-transform: uppercase;
-        font-size: 8px;
-        font-weight: bold;
-      }
-    }
+  .carousel{
+   width: 100%;
   }
 }
+}
+
 
 
 /* ---------------------------- */
@@ -260,7 +194,7 @@ body {
 /* ---------------------------- */
 
 #about-page{
-  height: 100vh;
+
   background-color: white;
   color: white;
   display: flex;
@@ -268,10 +202,9 @@ body {
   align-items: center;
   #about-title{
     font-size: 30px;
-    // margin-bottom: 40px;
+    margin-bottom: 35px;
     text-transform: uppercase;
     color: black;
-    // -webkit-text-stroke: 2px black;
     text-shadow: 3px 3px $base-color;
     font-weight: bold;
   }
@@ -283,7 +216,11 @@ body {
     color: black;
     align-items: center;
   #description-me{
-    width: 400px;
+    width: 480px;
+    #intro{
+      font-weight: bold;
+      font-size: 18px;
+    }
   }
   #skills{
     display: flex;
@@ -294,8 +231,7 @@ body {
     font-size: 25px;
     text-transform: uppercase;
     font-weight: bold;
-    color: white;
-    -webkit-text-stroke: 1px black;
+    color: black;
   }
   #grid{
     align-items: center;
@@ -317,7 +253,8 @@ body {
 }
 @media screen and (max-width: 700px) {
   #about-title{
-    font-size: 25px;
+    font-size: 28px;
+    // margin-bottom: 5%;
   }
   #about-container{
     display: flex;
@@ -325,7 +262,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     #description-me{
-      width: 80%;
+      width: 90%;
     }
     #skills{
       margin-top: 20%;
@@ -374,8 +311,9 @@ body {
     .company{
       font-weight: bold;
       font-size: 20px;
-      text-shadow: 3px 3px $base-color;
+      // text-shadow: 3px 3px $base-color;
       font-weight: bold;
+      text-transform: uppercase;
     }
     .job-dates{
       font-size: 18px;
@@ -389,6 +327,9 @@ body {
     }
   }
   @media screen and (max-width: 700px) {
+    #experience-title{
+      font-size: 28px;
+    }
     #experience-container{
       flex-direction: column;
       justify-content: center;
@@ -402,17 +343,15 @@ body {
 #contact-page{
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: $base-color;
   color: white;
   align-items: center;
   #contact-title{
-    font-weight: bold;
     font-size: 30px;
+    margin-bottom: 25px;
     text-transform: uppercase;
-    color: white;
-    margin: 20px 0 40px 0;
-    // -webkit-text-stroke: 2px black;
-    // text-shadow: 3px 3px $base-color;
+    color: black;
+    text-shadow: 3px 3px white;
     font-weight: bold;
   }
  #contact-container{
@@ -421,7 +360,9 @@ body {
    display: flex;
    justify-content: space-evenly;
    div a i {
-     color: white;
+     color: black;
+     text-shadow: 3px 3px white;
+
    }
  }
 }

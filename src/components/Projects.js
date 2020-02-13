@@ -3,6 +3,7 @@ import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
 import Carousel from 'react-bootstrap/Carousel'
 
+
 import greenGarms from '../images/green-garms.png'
 import swell from '../images/swell.png'
 import makeItCount from '../images/make-it-count.png'
@@ -17,15 +18,12 @@ import Tetris from './Tetris'
 
 const Projects = () => {
 
-  // const [itemModal, setItemModal] = useState(false)
-  // const [modalContent, setModalContent] = useState('')
 
   function toggleForm(e) {
-    // setModalContent(e.target.value)
+   console.log(e.target.value)
     const modalSelected = document.querySelector(`#${e.target.value}`)
     modalSelected.classList.toggle('is-active')
-    // console.log(e.target.value)
-    // setItemModal(!itemModal)
+
   }
 
   return <section className='section' id="project-page">
@@ -78,60 +76,58 @@ const Projects = () => {
     <Carousel>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          id="project-img"
+          className="project-img d-block w-100"
           src={greenGarms}
           alt="First slide"
-          id='project-img'
         />
         <Carousel.Caption>
-          <button className='read-more button is-black is-small' value='green-garms' onClick={e => toggleForm(e)}>READ MORE</button>
+          <button className='read-more button is-black ' value='green-garms' onClick={e => toggleForm(e)}>READ MORE</button>
         </Carousel.Caption>
       </Carousel.Item>
 
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="project-img d-block w-100"
           src={swell} alt='Swell'
         />
 
         <Carousel.Caption>
-          <button className='read-more button is-black is-small' value='swell' onClick={e => toggleForm(e)}>READ MORE</button>
+          <button className='read-more button is-black ' value='swell' onClick={e => toggleForm(e)}>READ MORE</button>
         </Carousel.Caption>
       </Carousel.Item>
 
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="project-img d-block w-100"
           src={makeItCount} alt='Make It Count'
         />
         <Carousel.Caption>
-          <button className='read-more button is-black is-small' value='make-it-count' onClick={e => toggleForm(e)}>READ MORE</button>
+          <button className='read-more button is-black ' value='make-it-count' onClick={e => toggleForm(e)}>READ MORE</button>
         </Carousel.Caption>
       </Carousel.Item>
 
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="project-img d-block w-100"
           src={lifeOnMars} alt='Life on Mars'
         />
         <Carousel.Caption>
-          <button className='read-more button is-black is-small' value='life-on-mars' onClick={e => toggleForm(e)}>READ MORE</button>
+          <button className='read-more button is-black ' value='life-on-mars' onClick={e => toggleForm(e)}>READ MORE</button>
         </Carousel.Caption>
       </Carousel.Item>
 
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="project-img d-block w-100"
           src={tetris} alt='Tetris'
         />
         <Carousel.Caption>
-          <button className='read-more button is-black is-small' value='tetris' onClick={e => toggleForm(e)}>READ MORE</button>
+          <button className='read-more button is-black ' value='tetris' onClick={e => toggleForm(e)}>READ MORE</button>
         </Carousel.Caption>
       </Carousel.Item>
 
     </Carousel>
-
-
   </section >
 }
 

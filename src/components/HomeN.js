@@ -39,7 +39,7 @@ const HomeN = () => {
       <Fade bottom>
         <div className='my-title'>Abi James</div>{' '}
       </Fade>
-      <TextLoop mask={true} interval={[1500, 4000, 4000, 4000, 4000]}>
+      <TextLoop mask={true} interval={[1000, 3000, 3000, 3000, 3000]}>
         <Fade bottom>
           <div className='my-subtitle'></div>
         </Fade >
